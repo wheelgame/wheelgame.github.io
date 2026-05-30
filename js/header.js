@@ -4,8 +4,9 @@
   <header class="site-header" id="siteHeader">
     <div class="header-inner">
       <a href="/" class="logo">
-        <span class="logo-icon">🎡</span> Names on Wheel
-      </a>
+  <img src="/logo.png" alt="Names on Wheel Logo" class="logo-image">
+  Names on Wheel
+</a>
       <nav>
         <ul class="nav-links" id="navLinks">
           <li><a href="/">Home</a></li>
