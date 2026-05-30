@@ -7,7 +7,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="/" class="logo">
-            <span class="logo-icon">🎡</span> NamesWheel
+            <span class="logo-icon">🎡</span> Names on Wheel
           </a>
           <p>The free, fun, and fast spin-the-wheel random picker. Add names, spin, and let fate decide. Perfect for classrooms, giveaways, parties, and everyday decisions.</p>
           <div style="margin-top:16px;display:flex;gap:12px">
