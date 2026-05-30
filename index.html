@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Names On Wheel – Free Spin the Wheel Random Picker | Wheel Spinner</title>
+  <meta name="description" content="Names On Wheel is a free, beautiful spinning wheel random picker. Add custom names, spin the wheel, and get instant random results. Perfect for classrooms, giveaways, games & decisions." />
+  <meta name="keywords" content="wheel of names, names on wheel, spin the wheel, wheel spinner, random wheel, spinning wheel, spin a wheel, random wheel spinner, picker wheel, wheel picker, free spin wheel, spin the wheel random picker, random wheel generator" />
+  <meta name="author" content="NamesWheel" />
+  <link rel="canonical" href="https://nameswheel.github.io/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Names On Wheel – Free Spin the Wheel Random Picker" />
+  <meta property="og:description" content="Free online wheel spinner. Add names, spin & pick a random winner instantly. Beautiful, fast, and fully customizable." />
+  <meta property="og:url" content="https://nameswheel.github.io/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://nameswheel.github.io/assets/og-image.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Names On Wheel – Spin the Wheel Random Picker" />
+  <meta name="twitter:description" content="Free online spinning wheel to pick random names, winners, and decisions." />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Names On Wheel",
+    "url": "https://nameswheel.github.io/",
+    "description": "Free online spin the wheel random picker. Add custom names and spin for random results.",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "featureList": [
+      "Custom names wheel",
+      "Yes/No wheel",
+      "Number wheel",
+      "Color wheel",
+      "Decision wheel",
+      "Luck wheel"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I use the Names On Wheel spinner?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Simply type or paste names into the input box on the left, then click the big SPIN button. The wheel will spin and land on a random name."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the Names On Wheel spinner free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! Names On Wheel is completely free to use with no registration required."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I customize the wheel colors and entries?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. You can add, edit, or remove any entry and choose from multiple color themes for your wheel."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many names can I add to the wheel?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can add up to 100 names or entries on a single wheel. The wheel automatically adjusts segment sizes."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- HEADER (component) -->
+  <div id="header-root"></div>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+    <div class="hero-bg-circles">
+      <span class="hc hc1"></span><span class="hc hc2"></span>
+      <span class="hc hc3"></span><span class="hc hc4"></span>
+      <span class="hc hc5"></span>
+    </div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <span class="hero-badge">✨ Free & No Sign-Up</span>
+        <h1>Spin the Wheel,<br/><span class="gradient-text">Pick a Random Name</span></h1>
+        <p class="hero-sub">The most fun random wheel spinner on the web. Add names, customize your wheel, and let fate decide — instantly and for free.</p>
+        <div class="hero-stats">
+          <div class="stat"><strong>100+</strong><span>Names Supported</span></div>
+          <div class="stat"><strong>6</strong><span>Wheel Types</span></div>
+          <div class="stat"><strong>∞</strong><span>Free Spins</span></div>
+        </div>
+        <a href="#spinner" class="btn-hero">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="white" stroke-width="2"/><path d="M12 6v6l4 2" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+          Try the Wheel Spinner
+        </a>
+      </div>
+      <div class="hero-wheel-preview">
+        <div class="mini-wheel" id="heroWheel">
+          <canvas id="heroCanvas" width="280" height="280"></canvas>
+          <div class="mini-wheel-pin">▼</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-wave">
+      <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="white"/></svg>
+    </div>
+  </section>
+
+  <!-- WHEEL TYPES NAV -->
+  <section class="wheel-types-nav" id="wheel-types">
+    <div class="container">
+      <div class="section-tag">Choose Your Wheel</div>
+      <h2 class="section-title">6 Types of <span class="gradient-text">Spinning Wheels</span></h2>
+      <p class="section-sub">From custom name pickers to yes/no decisions — every spin is a new adventure.</p>
+      <div class="wheel-type-cards">
+        <div class="wt-card active" data-wheel="names" onclick="switchWheel('names')">
+          <div class="wt-icon" style="background:linear-gradient(135deg,#ff6b6b,#feca57)">👥</div>
+          <strong>Names Wheel</strong><span>Pick a random name</span>
+        </div>
+        <div class="wt-card" data-wheel="yesno" onclick="switchWheel('yesno')">
+          <div class="wt-icon" style="background:linear-gradient(135deg,#48dbfb,#ff9ff3)">🤔</div>
+          <strong>Yes / No</strong><span>Quick decisions</span>
+        </div>
+        <div class="wt-card" data-wheel="numbers" onclick="switchWheel('numbers')">
+          <div class="wt-icon" style="background:linear-gradient(135deg,#1dd1a1,#10ac84)">🔢</div>
+          <strong>Number Wheel</strong><span>Random numbers</span>
+        </div>
+        <div class="wt-card" data-wheel="colors" onclick="switchWheel('colors')">
+          <div class="wt-icon" style="background:linear-gradient(135deg,#f368e0,#ee5a24)">🎨</div>
+          <strong>Color Wheel</strong><span>Pick a color</span>
+        </div>
+        <div class="wt-card" data-wheel="truth" onclick="switchWheel('truth')">
+          <div class="wt-icon" style="background:linear-gradient(135deg,#ffeaa7,#fdcb6e)">🎯</div>
+          <strong>Truth or Dare</strong><span>Party fun</span>
+        </div>
+        <div class="wt-card" data-wheel="custom" onclick="switchWheel('custom')">
+          <div class="wt-icon" style="background:linear-gradient(135deg,#a29bfe,#6c5ce7)">⚙️</div>
+          <strong>Custom Wheel</strong><span>Your entries</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN SPINNER SECTION -->
+  <section class="spinner-section" id="spinner">
+    <div class="container">
+      <div class="spinner-layout">
+
+        <!-- LEFT: Controls -->
+        <div class="spinner-controls">
+          <div class="controls-header">
+            <h3 id="wheelTitle">🎡 Names Wheel</h3>
+            <div class="controls-actions">
+              <button class="ctrl-btn" id="shuffleBtn" title="Shuffle" onclick="shuffleEntries()">🔀</button>
+              <button class="ctrl-btn" id="clearBtn" title="Clear All" onclick="clearAll()">🗑️</button>
+              <button class="ctrl-btn" id="sortBtn" title="Sort A-Z" onclick="sortEntries()">🔤</button>
+            </div>
+          </div>
+
+          <div class="entry-input-area">
+            <textarea id="entriesInput" placeholder="Enter names here (one per line)&#10;&#10;Alice&#10;Bob&#10;Charlie&#10;Diana&#10;Edward" rows="10"></textarea>
+            <div class="input-actions">
+              <button class="btn-add" onclick="updateWheelFromInput()">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+                Update Wheel
+              </button>
+            </div>
+          </div>
+
+          <div class="entries-list-wrap">
+            <div class="entries-list-header">
+              <span id="entryCount">5 entries</span>
+              <button class="link-btn" onclick="removeLastWinner()">Remove last winner</button>
+            </div>
+            <ul class="entries-list" id="entriesList"></ul>
+          </div>
+
+          <div class="theme-picker">
+            <span class="theme-label">Wheel Theme:</span>
+            <div class="theme-swatches">
+              <button class="swatch active" data-theme="vivid" onclick="setTheme('vivid')" title="Vivid"></button>
+              <button class="swatch" data-theme="candy" onclick="setTheme('candy')" title="Candy"></button>
+              <button class="swatch" data-theme="ocean" onclick="setTheme('ocean')" title="Ocean"></button>
+              <button class="swatch" data-theme="sunset" onclick="setTheme('sunset')" title="Sunset"></button>
+              <button class="swatch" data-theme="forest" onclick="setTheme('forest')" title="Forest"></button>
+              <button class="swatch" data-theme="mono" onclick="setTheme('mono')" title="Mono"></button>
+            </div>
+          </div>
+
+          <!-- Options -->
+          <div class="spin-options">
+            <label class="opt-toggle">
+              <input type="checkbox" id="removeWinner" /> Remove winner after spin
+            </label>
+            <label class="opt-toggle">
+              <input type="checkbox" id="confettiOpt" checked /> Confetti on winner
+            </label>
+            <label class="opt-toggle">
+              <input type="checkbox" id="soundOpt" checked /> Sound effects
+            </label>
+          </div>
+        </div>
+
+        <!-- CENTER: Wheel Canvas -->
+        <div class="wheel-center">
+          <div class="wheel-wrapper">
+            <div class="wheel-glow"></div>
+            <canvas id="wheelCanvas" width="480" height="480"></canvas>
+            <div class="wheel-pointer">▼</div>
+            <div class="wheel-center-btn" id="spinCenterBtn" onclick="spinWheel()">
+              <span id="spinBtnText">SPIN</span>
+            </div>
+          </div>
+          <button class="btn-spin" id="spinBtn" onclick="spinWheel()">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M21 12a9 9 0 1 1-9-9" stroke="white" stroke-width="2.5" stroke-linecap="round"/><path d="M21 3v5h-5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            SPIN THE WHEEL
+          </button>
+        </div>
+
+        <!-- RIGHT: Results -->
+        <div class="results-panel">
+          <h3>🏆 Results</h3>
+          <div class="winner-display" id="winnerDisplay">
+            <div class="winner-placeholder">
+              <span class="winner-icon">🎯</span>
+              <p>Spin the wheel to see who wins!</p>
+            </div>
+          </div>
+          <div class="history-wrap">
+            <div class="history-header">
+              <span>Spin History</span>
+              <button class="link-btn" onclick="clearHistory()">Clear</button>
+            </div>
+            <ul class="history-list" id="historyList">
+              <li class="history-empty">No spins yet</li>
+            </ul>
+          </div>
+          <div class="share-result" id="shareResult" style="display:none">
+            <button class="btn-share" onclick="shareResult()">
+              📤 Share Result
+            </button>
+            <button class="btn-copy" onclick="copyResult()">
+              📋 Copy
+            </button>
+          </div>
+        </div>
+
+      </div><!-- /spinner-layout -->
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-it-works" id="how">
+    <div class="container">
+      <div class="section-tag">Simple & Fast</div>
+      <h2 class="section-title">How the <span class="gradient-text">Wheel Spinner</span> Works</h2>
+      <p class="section-sub">Three easy steps to spin the wheel and pick a random name, number, or answer.</p>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <div class="step-icon">📝</div>
+          <h4>Add Your Entries</h4>
+          <p>Type or paste names, options, or any text into the entry box. Each line becomes one wheel segment. You can add up to 100 entries.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step-card">
+          <div class="step-num">02</div>
+          <div class="step-icon">🎡</div>
+          <h4>Spin the Wheel</h4>
+          <p>Click the big SPIN button or tap the center of the wheel. Watch it whirl with a smooth, realistic animation and suspenseful slowdown.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <div class="step-icon">🏆</div>
+          <h4>See Your Winner</h4>
+          <p>The wheel stops and your random result is highlighted with a fun animation and optional confetti burst. Share or record the result.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES SECTION -->
+  <section class="features-section" id="features">
+    <div class="container">
+      <div class="section-tag">Why Choose Us</div>
+      <h2 class="section-title">Powerful <span class="gradient-text">Wheel Features</span></h2>
+      <p class="section-sub">Everything you need in a free random wheel spinner — no downloads, no accounts.</p>
+      <div class="features-grid">
+        <div class="feat-card">
+          <div class="feat-icon">🎨</div>
+          <h4>6 Color Themes</h4>
+          <p>Switch between Vivid, Candy, Ocean, Sunset, Forest and Mono wheel color themes instantly.</p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon">📱</div>
+          <h4>Mobile Friendly</h4>
+          <p>Fully responsive design — spin the wheel on any phone, tablet, or desktop with ease.</p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon">🔇</div>
+          <h4>Sound Effects</h4>
+          <p>Satisfying tick sounds as the wheel spins, and a win fanfare when a result is selected.</p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon">🎉</div>
+          <h4>Confetti Burst</h4>
+          <p>Celebrate every winner with a colorful confetti animation that makes every spin exciting.</p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon">📜</div>
+          <h4>Spin History</h4>
+          <p>Every result is saved in a session history so you never lose track of previous spins.</p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon">🔀</div>
+          <h4>Shuffle & Sort</h4>
+          <p>Randomize the entry order or sort alphabetically with one click for full control.</p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon">🗑️</div>
+          <h4>Remove Winners</h4>
+          <p>Optionally remove each winner from the wheel to run elimination-style selections.</p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon">⚡</div>
+          <h4>Instant & Free</h4>
+          <p>No sign-up, no download, no cost. Open the page and start spinning the wheel immediately.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- USE CASES SECTION -->
+  <section class="use-cases-section" id="uses">
+    <div class="container">
+      <div class="section-tag">Popular Uses</div>
+      <h2 class="section-title">Who Uses the <span class="gradient-text">Names On Wheel</span>?</h2>
+      <p class="section-sub">Our random wheel spinner is loved by teachers, streamers, event planners, and everyone who needs a fair random pick.</p>
+      <div class="use-cases-grid">
+        <div class="use-card">
+          <div class="use-bg" style="background:linear-gradient(135deg,#667eea,#764ba2)"></div>
+          <span class="use-emoji">🏫</span>
+          <h4>Teachers & Classrooms</h4>
+          <p>Pick random students to answer questions, form groups, assign roles, or choose classroom helpers. Makes lessons interactive and fair.</p>
+        </div>
+        <div class="use-card">
+          <div class="use-bg" style="background:linear-gradient(135deg,#f093fb,#f5576c)"></div>
+          <span class="use-emoji">🎮</span>
+          <h4>Streamers & Gamers</h4>
+          <p>Select random viewers for giveaways, pick game modes, choose challengers, or randomly assign teams during live streams and tournaments.</p>
+        </div>
+        <div class="use-card">
+          <div class="use-bg" style="background:linear-gradient(135deg,#4facfe,#00f2fe)"></div>
+          <span class="use-emoji">🎁</span>
+          <h4>Giveaways & Contests</h4>
+          <p>Run fair, transparent giveaways by adding participant names. Spin and pick a winner live to show complete randomness and impartiality.</p>
+        </div>
+        <div class="use-card">
+          <div class="use-bg" style="background:linear-gradient(135deg,#43e97b,#38f9d7)"></div>
+          <span class="use-emoji">🍕</span>
+          <h4>Everyday Decisions</h4>
+          <p>Can't decide where to eat? What movie to watch? Use the wheel spinner to settle any disagreement or make any random choice instantly.</p>
+        </div>
+        <div class="use-card">
+          <div class="use-bg" style="background:linear-gradient(135deg,#fa709a,#fee140)"></div>
+          <span class="use-emoji">🎉</span>
+          <h4>Party Games</h4>
+          <p>Truth or Dare, spin the bottle replacement, party game wheel — add your own rules and turn any gathering into an unforgettable event.</p>
+        </div>
+        <div class="use-card">
+          <div class="use-bg" style="background:linear-gradient(135deg,#a18cd1,#fbc2eb)"></div>
+          <span class="use-emoji">💼</span>
+          <h4>Team & Office</h4>
+          <p>Randomly assign tasks, pick who presents first, choose office lunch spots, or run team-building random pairings with ease.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO TEXT / ABOUT SECTION -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <div class="section-tag">About</div>
+          <h2>The Best Free <span class="gradient-text">Spin The Wheel</span> Random Picker</h2>
+          <p><strong>Names On Wheel</strong> is a free, browser-based <em>wheel spinner</em> and <em>random name picker</em> that works on any device. Whether you call it a "wheel of names," a "random wheel generator," or a "spin it wheel" — our tool delivers instant, fair, and fun random results every time.</p>
+          <p>Our <strong>spinning wheel</strong> uses a cryptographically seeded pseudo-random algorithm to ensure every spin is completely unbiased. The result is determined at the moment you click — no tricks, no manipulation.</p>
+          <p>With support for up to 100 entries, 6 beautiful color themes, smooth easing animations, and multiple wheel modes, Names On Wheel is the most feature-rich <strong>free spin wheel</strong> available — no registration, no ads interrupting your spins.</p>
+          <div class="about-tags">
+            <span class="tag">Wheel of Names</span>
+            <span class="tag">Spin The Wheel</span>
+            <span class="tag">Random Wheel</span>
+            <span class="tag">Wheel Spinner</span>
+            <span class="tag">Name Picker</span>
+            <span class="tag">Random Picker</span>
+            <span class="tag">Picker Wheel</span>
+            <span class="tag">Spinning Wheel</span>
+          </div>
+        </div>
+        <div class="about-visual">
+          <div class="about-card-stack">
+            <div class="acard acard1">🎡 Wheel Spinner</div>
+            <div class="acard acard2">🏆 Random Picker</div>
+            <div class="acard acard3">✨ Free Forever</div>
+            <div class="acard acard4">📱 Mobile Ready</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-tag">FAQs</div>
+      <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
+      <p class="section-sub">Everything you need to know about the Names On Wheel spinner.</p>
+      <div class="faq-list" id="faqList">
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            How do I use the Names On Wheel spinner?
+            <span class="faq-arrow">+</span>
+          </button>
+          <div class="faq-a">
+            <p>Type or paste your names into the text box on the left — one name per line. Click the <strong>Update Wheel</strong> button to load them, then hit the big <strong>SPIN THE WHEEL</strong> button. The wheel spins and lands on a random entry!</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Is the Names On Wheel spinner completely free?
+            <span class="faq-arrow">+</span>
+          </button>
+          <div class="faq-a">
+            <p>Yes! Names On Wheel is 100% free with no registration, no subscription, and no hidden charges. Spin as many times as you want, with as many names as you like.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            How many names can I add to the wheel?
+            <span class="faq-arrow">+</span>
+          </button>
+          <div class="faq-a">
+            <p>You can add up to <strong>100 names or entries</strong> to a single wheel. The segments automatically resize to fit all entries, and text is scaled for readability.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Is the random wheel picker truly random?
+            <span class="faq-arrow">+</span>
+          </button>
+          <div class="faq-a">
+            <p>Yes. The result uses JavaScript's <code>Math.random()</code> seeded at spin time, which provides statistically uniform randomness. Every entry has an equal chance of winning each spin.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Can I remove the winner after spinning?
+            <span class="faq-arrow">+</span>
+          </button>
+          <div class="faq-a">
+            <p>Yes! Check the <strong>"Remove winner after spin"</strong> option in the settings panel. This is perfect for elimination-style selections where each winner is removed before the next spin.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Does it work on mobile phones?
+            <span class="faq-arrow">+</span>
+          </button>
+          <div class="faq-a">
+            <p>Absolutely! Names On Wheel is fully responsive and touch-friendly. Tap the center button or the SPIN button to rotate the wheel on any smartphone or tablet.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            What are the different wheel types available?
+            <span class="faq-arrow">+</span>
+          </button>
+          <div class="faq-a">
+            <p>We offer 6 wheel types: <strong>Names Wheel</strong> (custom names), <strong>Yes/No Wheel</strong> (quick decisions), <strong>Number Wheel</strong> (random numbers 1–20), <strong>Color Wheel</strong> (random colors), <strong>Truth or Dare Wheel</strong>, and a fully <strong>Custom Wheel</strong> where you enter anything you want.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="cta-section">
+    <div class="cta-bg-circles">
+      <span class="cc cc1"></span><span class="cc cc2"></span>
+    </div>
+    <div class="container">
+      <div class="cta-content">
+        <h2>Ready to Spin the Wheel?</h2>
+        <p>Join thousands of teachers, gamers, and decision-makers who use Names On Wheel every day. It's free, fast, and endlessly fun.</p>
+        <a href="#spinner" class="btn-hero btn-cta-hero">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M21 12a9 9 0 1 1-9-9" stroke="white" stroke-width="2.5" stroke-linecap="round"/><path d="M21 3v5h-5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Spin It Now — It's Free!
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER (component) -->
+  <div id="footer-root"></div>
+
+  <!-- WINNER MODAL -->
+  <div class="modal-overlay" id="winnerModal">
+    <div class="modal-box">
+      <div class="modal-confetti" id="modalConfetti"></div>
+      <div class="modal-emoji">🏆</div>
+      <h2>We Have a Winner!</h2>
+      <div class="modal-winner-name" id="modalWinnerName"></div>
+      <div class="modal-actions">
+        <button class="btn-modal-spin" onclick="closeModal(); setTimeout(spinWheel, 400)">Spin Again</button>
+        <button class="btn-modal-close" onclick="closeModal()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="js/header.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="js/wheel.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

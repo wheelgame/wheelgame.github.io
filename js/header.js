@@ -1,0 +1,53 @@
+// header.js — Header Component
+(function () {
+  const html = `
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="#home" class="logo">
+        <span class="logo-icon">🎡</span> NamesWheel
+      </a>
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#spinner">Spin Wheel</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#uses">Uses</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#spinner" class="nav-cta">🎡 Spin Now</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Menu" onclick="toggleMobileNav()">
+          <span class="ham-line"></span>
+          <span class="ham-line"></span>
+          <span class="ham-line"></span>
+        </button>
+      </nav>
+    </div>
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="#home" onclick="closeMobileNav()">🏠 Home</a>
+      <a href="#spinner" onclick="closeMobileNav()">🎡 Spin Wheel</a>
+      <a href="#wheel-types" onclick="closeMobileNav()">🎨 Wheel Types</a>
+      <a href="#features" onclick="closeMobileNav()">⚡ Features</a>
+      <a href="#uses" onclick="closeMobileNav()">💡 Uses</a>
+      <a href="#about" onclick="closeMobileNav()">ℹ️ About</a>
+      <a href="#faq" onclick="closeMobileNav()">❓ FAQ</a>
+    </nav>
+  </header>`;
+  document.getElementById('header-root').innerHTML = html;
+
+  // Scroll shadow
+  window.addEventListener('scroll', () => {
+    const h = document.getElementById('siteHeader');
+    if (h) h.style.boxShadow = window.scrollY > 20 ? '0 4px 30px rgba(0,0,0,0.1)' : '0 2px 20px rgba(0,0,0,0.06)';
+  });
+})();
+
+function toggleMobileNav() {
+  const nav = document.getElementById('mobileNav');
+  const ham = document.getElementById('hamburger');
+  nav.classList.toggle('open');
+  ham.classList.toggle('open');
+}
+function closeMobileNav() {
+  document.getElementById('mobileNav').classList.remove('open');
+  document.getElementById('hamburger').classList.remove('open');
+}
