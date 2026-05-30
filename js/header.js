@@ -3,17 +3,17 @@
   const html = `
   <header class="site-header" id="siteHeader">
     <div class="header-inner">
-      <a href="#home" class="logo">
+      <a href="/" class="logo">
         <span class="logo-icon">🎡</span> NamesWheel
       </a>
       <nav>
         <ul class="nav-links" id="navLinks">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#spinner">Spin Wheel</a></li>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#uses">Uses</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="#spinner" class="nav-cta">🎡 Spin Now</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/#spinner">Spin Wheel</a></li>
+          <li><a href="/#features">Features</a></li>
+          <li><a href="/#uses">Uses</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+          <li><a href="/#spinner" class="nav-cta">🎡 Spin Now</a></li>
         </ul>
         <button class="hamburger" id="hamburger" aria-label="Menu" onclick="toggleMobileNav()">
           <span class="ham-line"></span>
@@ -23,13 +23,13 @@
       </nav>
     </div>
     <nav class="mobile-nav" id="mobileNav">
-      <a href="#home" onclick="closeMobileNav()">🏠 Home</a>
-      <a href="#spinner" onclick="closeMobileNav()">🎡 Spin Wheel</a>
-      <a href="#wheel-types" onclick="closeMobileNav()">🎨 Wheel Types</a>
-      <a href="#features" onclick="closeMobileNav()">⚡ Features</a>
-      <a href="#uses" onclick="closeMobileNav()">💡 Uses</a>
-      <a href="#about" onclick="closeMobileNav()">ℹ️ About</a>
-      <a href="#faq" onclick="closeMobileNav()">❓ FAQ</a>
+      <a href="/#home" onclick="closeMobileNav()">🏠 Home</a>
+      <a href="/#spinner" onclick="closeMobileNav()">🎡 Spin Wheel</a>
+      <a href="/#wheel-types" onclick="closeMobileNav()">🎨 Wheel Types</a>
+      <a href="/#features" onclick="closeMobileNav()">⚡ Features</a>
+      <a href="/#uses" onclick="closeMobileNav()">💡 Uses</a>
+      <a href="/about" onclick="closeMobileNav()">ℹ️ About</a>
+      <a href="/#faq" onclick="closeMobileNav()">❓ FAQ</a>
     </nav>
   </header>`;
   document.getElementById('header-root').innerHTML = html;
