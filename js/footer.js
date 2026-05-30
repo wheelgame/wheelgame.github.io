@@ -55,7 +55,7 @@
           <a href="/terms">Terms of Use</a>
           <a href="/contact">Contact</a>
           <a href="/about">About</a>
-          <a href="/cookie">Cookies Policy</a>
+          <a href="/cookies-policy">Cookies Policy</a>
         </div>
       </div>
     </div>
