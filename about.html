@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us – Names On Wheel</title>
+  <meta name="description" content="Meet Zulfiqar Qasim, the web developer and SEO expert behind Names On Wheel. Learn more about our high-performance random picker tool." />
+  <meta name="author" content="Zulfiqar Qasim" />
+  <link rel="canonical" href="https://nameswheel.github.io/about" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    .internal-about-section { padding: 60px 0 100px; background: var(--bg2); }
+    .internal-about-card { max-width: 900px; margin: 0 auto; background: #ffffff; padding: 48px; border-radius: var(--radius); border: 1px solid var(--border); box-shadow: var(--shadow); display: grid; grid-template-columns: 280px 1fr; gap: 40px; align-items: start; }
+    .author-photo-wrapper { position: relative; width: 100%; border-radius: var(--radius); overflow: hidden; border: 4px solid var(--border); box-shadow: var(--shadow); }
+    .author-photo-wrapper img { width: 100%; height: auto; display: block; filter: saturate(1.1); }
+    .author-badge { background: var(--primary); color: white; padding: 6px 12px; font-weight: 800; text-transform: uppercase; font-size: 0.75rem; border-radius: 50px; display: inline-block; margin-bottom: 12px; font-family: var(--font-body); letter-spacing: 0.5px; }
+    .internal-about-card h1 { font-family: var(--font-display); font-size: 2.5rem; margin-bottom: 16px; line-height: 1.2; color: var(--dark); }
+    .author-bio p { color: var(--text-light); margin-bottom: 16px; line-height: 1.8; font-size: 1rem; }
+    .author-expertise { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+    .expert-tag { background: var(--bg2); border: 1px solid var(--border); color: var(--dark); padding: 6px 16px; border-radius: 50px; font-size: 0.85rem; font-weight: 700; }
+    @media (max-width: 768px) {
+      .internal-about-card { grid-template-columns: 1fr; padding: 24px; gap: 24px; border-radius: var(--radius-sm); }
+      .author-photo-wrapper { max-width: 200px; margin: 0 auto; }
+      .internal-about-card h1 { font-size: 2rem; text-align: center; }
+      .author-badge { display: block; width: max-content; margin: 0 auto 12px; }
+    }
+  </style>
+
+  
+</head>
+<body>
+
+  <div id="header-root"></div>
+
+  <main class="internal-about-section">
+    <div class="container">
+      <div class="internal-about-card">
+        
+        <div class="author-photo-sidebar">
+          <div class="author-photo-wrapper">
+            <img src="assets/zulfiqar-qasim.png" alt="Zulfiqar Qasim" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22350%22 style=%22background:%23a29bfe%22><text x=%2250%25%22 y=%2250%25%22 font-size=%2260%22 fill=%22white%22 font-family=%22sans-serif%22 text-anchor=%22middle%22 dy=%22.3em%22>ZQ</text></svg>'">
+          </div>
+        </div>
+
+        <div class="author-bio">
+          <span class="author-badge">Founder & Creator</span>
+          <h1>Hi, I'm <span class="gradient-text">Zulfiqar Qasim</span></h1>
+          
+          <p>Welcome to <strong>Names On Wheel</strong>! I am a passionate web developer and SEO expert dedicated to building performance-driven, accessible, and high-quality utility web apps that simplify daily decision-making.</p>
+          
+          <p>Names On Wheel was engineered specifically to address the need for a fast, beautiful, and completely random picker wheel tool. Built ground-up with optimized browser rendering logic and a modern, vibrant interface, this platform serves thousands of teachers, content creators, digital marketers, and gaming enthusiasts globally every single day.</p>
+          
+          <p>As an SEO specialist, I ensure our systems load lightning-fast, respect Core Web Vitals, and remain easily indexable while offering absolute user privacy—keeping all processing tasks strictly inside your local browser client.</p>
+
+          <div class="author-expertise">
+            <span class="expert-tag">🚀 Web Development</span>
+            <span class="expert-tag">📈 Technical SEO</span>
+            <span class="expert-tag">⚡ Core Web Vitals</span>
+            <span class="expert-tag">🎨 UI/UX Design</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <div id="footer-root"></div>
+
+  <script src="js/header.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
