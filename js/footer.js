@@ -6,7 +6,7 @@
     <div class="footer-inner">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="#home" class="logo">
+          <a href="/" class="logo">
             <span class="logo-icon">🎡</span> NamesWheel
           </a>
           <p>The free, fun, and fast spin-the-wheel random picker. Add names, spin, and let fate decide. Perfect for classrooms, giveaways, parties, and everyday decisions.</p>
@@ -28,31 +28,33 @@
         <div class="footer-col">
           <h5>Popular Uses</h5>
           <ul>
-            <li><a href="#uses">Classroom Picker</a></li>
-            <li><a href="#uses">Giveaway Winner</a></li>
-            <li><a href="#uses">Party Games</a></li>
-            <li><a href="#uses">Decision Maker</a></li>
-            <li><a href="#uses">Team Selector</a></li>
-            <li><a href="#uses">Stream Giveaway</a></li>
+            <li><a href="/#uses">Classroom Picker</a></li>
+            <li><a href="/#uses">Giveaway Winner</a></li>
+            <li><a href="/#uses">Party Games</a></li>
+            <li><a href="/#uses">Decision Maker</a></li>
+            <li><a href="/#uses">Team Selector</a></li>
+            <li><a href="/#uses">Stream Giveaway</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h5>Quick Links</h5>
           <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#how">How It Works</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#faq">FAQ</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/#how">How It Works</a></li>
+            <li><a href="/#features">Features</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#faq">FAQ</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
         <p>© ${year} NamesWheel — nameswheel.github.io. All rights reserved.</p>
         <div class="footer-bottom-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Use</a>
-          <a href="#">Contact</a>
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/terms">Terms of Use</a>
+          <a href="/contact">Contact</a>
+          <a href="/about">About</a>
+          <a href="/cookie">Cookies Policy</a>
         </div>
       </div>
     </div>
