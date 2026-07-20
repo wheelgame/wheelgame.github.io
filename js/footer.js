@@ -8,7 +8,7 @@
         <div class="footer-brand">
           <a href="/" class="logo">
   <img src="/logo.png" alt="Names on Wheel Logo" class="logo-image">
-  Names on Wheel
+  Spin The Wheel
 </a>
           <p>The free, fun, and fast spin-the-wheel random picker. Add names, spin, and let fate decide. Perfect for classrooms, giveaways, parties, and everyday decisions.</p>
           <div style="margin-top:16px;display:flex;gap:12px">
