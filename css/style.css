@@ -152,6 +152,12 @@ body {
 .hero-wave { margin-top: 60px; }
 .hero-wave svg { display: block; }
 
+/* ---- MAIN CONTENT WRAPPER (for mobile reorder) ---- */
+.main-content-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 /* ---- WHEEL TYPES NAV ---- */
 .wheel-types-nav { padding: 60px 0; background: white; text-align: center; }
 .wheel-type-cards { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; margin-top: 8px; }
@@ -488,6 +494,7 @@ body {
   .about-visual { display: none; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
+
 @media (max-width: 768px) {
   .spinner-layout { grid-template-columns: 1fr; }
   .hero-content { flex-direction: column; text-align: center; }
@@ -511,7 +518,20 @@ body {
   .footer-bottom { flex-direction: column; text-align: center; }
   #wheelCanvas { width: 320px !important; height: 320px !important; }
   .wheel-wrapper { transform: scale(0.85); }
+
+  /* ----- MOBILE REORDER: spin wheel above nav ----- */
+  .main-content-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .spinner-section {
+    order: 1 !important;
+  }
+  .wheel-types-nav {
+    order: 2 !important;
+  }
 }
+
 @media (max-width: 480px) {
   .wheel-type-cards { gap: 10px; }
   .wt-card { min-width: 100px; padding: 14px 12px; }
