@@ -131,11 +131,16 @@ function easeOut(t) {
   return 1 - Math.pow(1 - t, 4);
 }
 
+// ---- FIXED WINNER INDEX ---- 
 function getWinnerIndex(rotation, n) {
   const arc = (Math.PI * 2) / n;
-  // The pointer is at top (270 deg = -PI/2). We need to find which segment is at top.
-  const normalized = (((-rotation % (Math.PI * 2)) + Math.PI * 2) + Math.PI / 2) % (Math.PI * 2);
-  const idx = Math.floor(normalized / arc) % n;
+  // The pointer is at top (12 o'clock) = -PI/2 in our coordinate system.
+  // We need to find which segment is centered at that angle.
+  // The center of segment i is at angle: rotation + i*arc - PI/2 + arc/2
+  // We want that to equal -PI/2 (top) => rotation + i*arc + arc/2 = 0 => i = -rotation/arc - 0.5
+  // Using floor and modulo.
+  let idx = Math.floor((-rotation - arc / 2) / arc);
+  idx = ((idx % n) + n) % n;
   return idx;
 }
 
@@ -152,9 +157,14 @@ function spinWheel() {
   const winnerIdx = Math.floor(Math.random() * currentEntries.length);
   const arc = (Math.PI * 2) / currentEntries.length;
   const extraSpins = (5 + Math.random() * 5) * Math.PI * 2;
-  // Position the winner segment center under the pointer
-  const winnerAngle = winnerIdx * arc + arc / 2;
-  const targetRotFinal = extraSpins + (Math.PI * 2 - winnerAngle) + wheelRotation;
+  // We want the winner segment's center to align with the pointer (top = -PI/2)
+  // The center of segment i is at rotation + i*arc - PI/2 + arc/2
+  // We want: rotation + winnerIdx*arc - PI/2 + arc/2 = -PI/2 (mod 2PI)
+  // => rotation = -winnerIdx*arc - arc/2 (mod 2PI)
+  // We'll spin extraSpins and then settle at that rotation.
+  const finalRotation = extraSpins - winnerIdx * arc - arc / 2;
+  // Ensure positive
+  const targetRotFinal = finalRotation + Math.ceil(Math.abs(finalRotation) / (Math.PI * 2)) * (Math.PI * 2);
   
   const startRot = wheelRotation;
   const totalDelta = targetRotFinal - startRot;
