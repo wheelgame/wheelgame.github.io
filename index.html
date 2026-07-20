@@ -127,39 +127,7 @@
   <!-- MAIN CONTENT WRAPPER for mobile reorder -->
   <div class="main-content-wrapper">
 
-    <!-- WHEEL TYPES NAV -->
-    <section class="wheel-types-nav" id="wheel-types">
-      <div class="container">          
-        <div class="wheel-type-cards">
-          <div class="wt-card active" data-wheel="names" onclick="switchWheel('names')">
-            <div class="wt-icon" style="background:linear-gradient(135deg,#ff6b6b,#feca57)">👥</div>
-            <strong>Names Wheel</strong><span>Pick a random name</span>
-          </div>
-          <div class="wt-card" data-wheel="yesno" onclick="switchWheel('yesno')">
-            <div class="wt-icon" style="background:linear-gradient(135deg,#48dbfb,#ff9ff3)">🤔</div>
-            <strong>Yes / No</strong><span>Quick decisions</span>
-          </div>
-          <div class="wt-card" data-wheel="numbers" onclick="switchWheel('numbers')">
-            <div class="wt-icon" style="background:linear-gradient(135deg,#1dd1a1,#10ac84)">🔢</div>
-            <strong>Number Wheel</strong><span>Random numbers</span>
-          </div>
-          <div class="wt-card" data-wheel="colors" onclick="switchWheel('colors')">
-            <div class="wt-icon" style="background:linear-gradient(135deg,#f368e0,#ee5a24)">🎨</div>
-            <strong>Color Wheel</strong><span>Pick a color</span>
-          </div>
-          <div class="wt-card" data-wheel="truth" onclick="switchWheel('truth')">
-            <div class="wt-icon" style="background:linear-gradient(135deg,#ffeaa7,#fdcb6e)">🎯</div>
-            <strong>Truth or Dare</strong><span>Party fun</span>
-          </div>
-          <div class="wt-card" data-wheel="custom" onclick="switchWheel('custom')">
-            <div class="wt-icon" style="background:linear-gradient(135deg,#a29bfe,#6c5ce7)">⚙️</div>
-            <strong>Custom Wheel</strong><span>Your entries</span>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <!-- MAIN SPINNER SECTION -->
+    <!-- MAIN SPINNER SECTION - MOVED FIRST for mobile -->
     <section class="spinner-section" id="spinner">
       <div class="container">
         <div class="spinner-layout">
@@ -264,6 +232,38 @@
           </div>
 
         </div><!-- /spinner-layout -->
+      </div>
+    </section>
+
+    <!-- WHEEL TYPES NAV - MOVED SECOND for mobile -->
+    <section class="wheel-types-nav" id="wheel-types">
+      <div class="container">          
+        <div class="wheel-type-cards">
+          <div class="wt-card active" data-wheel="names" onclick="switchWheel('names')">
+            <div class="wt-icon" style="background:linear-gradient(135deg,#ff6b6b,#feca57)">👥</div>
+            <strong>Names Wheel</strong><span>Pick a random name</span>
+          </div>
+          <div class="wt-card" data-wheel="yesno" onclick="switchWheel('yesno')">
+            <div class="wt-icon" style="background:linear-gradient(135deg,#48dbfb,#ff9ff3)">🤔</div>
+            <strong>Yes / No</strong><span>Quick decisions</span>
+          </div>
+          <div class="wt-card" data-wheel="numbers" onclick="switchWheel('numbers')">
+            <div class="wt-icon" style="background:linear-gradient(135deg,#1dd1a1,#10ac84)">🔢</div>
+            <strong>Number Wheel</strong><span>Random numbers</span>
+          </div>
+          <div class="wt-card" data-wheel="colors" onclick="switchWheel('colors')">
+            <div class="wt-icon" style="background:linear-gradient(135deg,#f368e0,#ee5a24)">🎨</div>
+            <strong>Color Wheel</strong><span>Pick a color</span>
+          </div>
+          <div class="wt-card" data-wheel="truth" onclick="switchWheel('truth')">
+            <div class="wt-icon" style="background:linear-gradient(135deg,#ffeaa7,#fdcb6e)">🎯</div>
+            <strong>Truth or Dare</strong><span>Party fun</span>
+          </div>
+          <div class="wt-card" data-wheel="custom" onclick="switchWheel('custom')">
+            <div class="wt-icon" style="background:linear-gradient(135deg,#a29bfe,#6c5ce7)">⚙️</div>
+            <strong>Custom Wheel</strong><span>Your entries</span>
+          </div>
+        </div>
       </div>
     </section>
 
