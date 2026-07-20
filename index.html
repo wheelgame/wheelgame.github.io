@@ -124,145 +124,150 @@
     </div>    
   </section>
 
-   <!-- WHEEL TYPES NAV -->
-  <section class="wheel-types-nav" id="wheel-types">
-    <div class="container">          
-      <div class="wheel-type-cards">
-        <div class="wt-card active" data-wheel="names" onclick="switchWheel('names')">
-          <div class="wt-icon" style="background:linear-gradient(135deg,#ff6b6b,#feca57)">👥</div>
-          <strong>Names Wheel</strong><span>Pick a random name</span>
-        </div>
-        <div class="wt-card" data-wheel="yesno" onclick="switchWheel('yesno')">
-          <div class="wt-icon" style="background:linear-gradient(135deg,#48dbfb,#ff9ff3)">🤔</div>
-          <strong>Yes / No</strong><span>Quick decisions</span>
-        </div>
-        <div class="wt-card" data-wheel="numbers" onclick="switchWheel('numbers')">
-          <div class="wt-icon" style="background:linear-gradient(135deg,#1dd1a1,#10ac84)">🔢</div>
-          <strong>Number Wheel</strong><span>Random numbers</span>
-        </div>
-        <div class="wt-card" data-wheel="colors" onclick="switchWheel('colors')">
-          <div class="wt-icon" style="background:linear-gradient(135deg,#f368e0,#ee5a24)">🎨</div>
-          <strong>Color Wheel</strong><span>Pick a color</span>
-        </div>
-        <div class="wt-card" data-wheel="truth" onclick="switchWheel('truth')">
-          <div class="wt-icon" style="background:linear-gradient(135deg,#ffeaa7,#fdcb6e)">🎯</div>
-          <strong>Truth or Dare</strong><span>Party fun</span>
-        </div>
-        <div class="wt-card" data-wheel="custom" onclick="switchWheel('custom')">
-          <div class="wt-icon" style="background:linear-gradient(135deg,#a29bfe,#6c5ce7)">⚙️</div>
-          <strong>Custom Wheel</strong><span>Your entries</span>
+  <!-- MAIN CONTENT WRAPPER for mobile reorder -->
+  <div class="main-content-wrapper">
+
+    <!-- WHEEL TYPES NAV -->
+    <section class="wheel-types-nav" id="wheel-types">
+      <div class="container">          
+        <div class="wheel-type-cards">
+          <div class="wt-card active" data-wheel="names" onclick="switchWheel('names')">
+            <div class="wt-icon" style="background:linear-gradient(135deg,#ff6b6b,#feca57)">👥</div>
+            <strong>Names Wheel</strong><span>Pick a random name</span>
+          </div>
+          <div class="wt-card" data-wheel="yesno" onclick="switchWheel('yesno')">
+            <div class="wt-icon" style="background:linear-gradient(135deg,#48dbfb,#ff9ff3)">🤔</div>
+            <strong>Yes / No</strong><span>Quick decisions</span>
+          </div>
+          <div class="wt-card" data-wheel="numbers" onclick="switchWheel('numbers')">
+            <div class="wt-icon" style="background:linear-gradient(135deg,#1dd1a1,#10ac84)">🔢</div>
+            <strong>Number Wheel</strong><span>Random numbers</span>
+          </div>
+          <div class="wt-card" data-wheel="colors" onclick="switchWheel('colors')">
+            <div class="wt-icon" style="background:linear-gradient(135deg,#f368e0,#ee5a24)">🎨</div>
+            <strong>Color Wheel</strong><span>Pick a color</span>
+          </div>
+          <div class="wt-card" data-wheel="truth" onclick="switchWheel('truth')">
+            <div class="wt-icon" style="background:linear-gradient(135deg,#ffeaa7,#fdcb6e)">🎯</div>
+            <strong>Truth or Dare</strong><span>Party fun</span>
+          </div>
+          <div class="wt-card" data-wheel="custom" onclick="switchWheel('custom')">
+            <div class="wt-icon" style="background:linear-gradient(135deg,#a29bfe,#6c5ce7)">⚙️</div>
+            <strong>Custom Wheel</strong><span>Your entries</span>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-  
-  <!-- MAIN SPINNER SECTION -->
-  <section class="spinner-section" id="spinner">
-    <div class="container">
-      <div class="spinner-layout">
+    </section>
+    
+    <!-- MAIN SPINNER SECTION -->
+    <section class="spinner-section" id="spinner">
+      <div class="container">
+        <div class="spinner-layout">
 
-        <!-- LEFT: Controls -->
-        <div class="spinner-controls">
-          <div class="controls-header">
-            <h3 id="wheelTitle">🎡 Names Wheel</h3>
-            <div class="controls-actions">
-              <button class="ctrl-btn" id="shuffleBtn" title="Shuffle" onclick="shuffleEntries()">🔀</button>
-              <button class="ctrl-btn" id="clearBtn" title="Clear All" onclick="clearAll()">🗑️</button>
-              <button class="ctrl-btn" id="sortBtn" title="Sort A-Z" onclick="sortEntries()">🔤</button>
+          <!-- LEFT: Controls -->
+          <div class="spinner-controls">
+            <div class="controls-header">
+              <h3 id="wheelTitle">🎡 Names Wheel</h3>
+              <div class="controls-actions">
+                <button class="ctrl-btn" id="shuffleBtn" title="Shuffle" onclick="shuffleEntries()">🔀</button>
+                <button class="ctrl-btn" id="clearBtn" title="Clear All" onclick="clearAll()">🗑️</button>
+                <button class="ctrl-btn" id="sortBtn" title="Sort A-Z" onclick="sortEntries()">🔤</button>
+              </div>
+            </div>
+
+            <div class="entry-input-area">
+              <textarea id="entriesInput" placeholder="Enter names here (one per line)&#10;&#10;Alice&#10;Bob&#10;Charlie&#10;Diana&#10;Edward" rows="10"></textarea>
+              <div class="input-actions">
+                <button class="btn-add" onclick="updateWheelFromInput()">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+                  Update Wheel
+                </button>
+              </div>
+            </div>
+
+            <div class="entries-list-wrap">
+              <div class="entries-list-header">
+                <span id="entryCount">5 entries</span>
+                <button class="link-btn" onclick="removeLastWinner()">Remove last winner</button>
+              </div>
+              <ul class="entries-list" id="entriesList"></ul>
+            </div>
+
+            <div class="theme-picker">
+              <span class="theme-label">Wheel Theme:</span>
+              <div class="theme-swatches">
+                <button class="swatch active" data-theme="vivid" onclick="setTheme('vivid')" title="Vivid"></button>
+                <button class="swatch" data-theme="candy" onclick="setTheme('candy')" title="Candy"></button>
+                <button class="swatch" data-theme="ocean" onclick="setTheme('ocean')" title="Ocean"></button>
+                <button class="swatch" data-theme="sunset" onclick="setTheme('sunset')" title="Sunset"></button>
+                <button class="swatch" data-theme="forest" onclick="setTheme('forest')" title="Forest"></button>
+                <button class="swatch" data-theme="mono" onclick="setTheme('mono')" title="Mono"></button>
+              </div>
+            </div>
+
+            <!-- Options -->
+            <div class="spin-options">
+              <label class="opt-toggle">
+                <input type="checkbox" id="removeWinner" /> Remove winner after spin
+              </label>
+              <label class="opt-toggle">
+                <input type="checkbox" id="confettiOpt" checked /> Confetti on winner
+              </label>
+              <label class="opt-toggle">
+                <input type="checkbox" id="soundOpt" checked /> Sound effects
+              </label>
             </div>
           </div>
 
-          <div class="entry-input-area">
-            <textarea id="entriesInput" placeholder="Enter names here (one per line)&#10;&#10;Alice&#10;Bob&#10;Charlie&#10;Diana&#10;Edward" rows="10"></textarea>
-            <div class="input-actions">
-              <button class="btn-add" onclick="updateWheelFromInput()">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
-                Update Wheel
+          <!-- CENTER: Wheel Canvas -->
+          <div class="wheel-center">
+            <div class="wheel-wrapper">
+              <div class="wheel-glow"></div>
+              <canvas id="wheelCanvas" width="480" height="480"></canvas>
+              <div class="wheel-pointer">▼</div>
+              <div class="wheel-center-btn" id="spinCenterBtn" onclick="spinWheel()">
+                <span id="spinBtnText">SPIN</span>
+              </div>
+            </div>
+            <button class="btn-spin" id="spinBtn" onclick="spinWheel()">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M21 12a9 9 0 1 1-9-9" stroke="white" stroke-width="2.5" stroke-linecap="round"/><path d="M21 3v5h-5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              SPIN THE WHEEL
+            </button>
+          </div>
+
+          <!-- RIGHT: Results -->
+          <div class="results-panel">
+            <h3>🏆 Results</h3>
+            <div class="winner-display" id="winnerDisplay">
+              <div class="winner-placeholder">
+                <span class="winner-icon">🎯</span>
+                <p>Spin the wheel to see who wins!</p>
+              </div>
+            </div>
+            <div class="history-wrap">
+              <div class="history-header">
+                <span>Spin History</span>
+                <button class="link-btn" onclick="clearHistory()">Clear</button>
+              </div>
+              <ul class="history-list" id="historyList">
+                <li class="history-empty">No spins yet</li>
+              </ul>
+            </div>
+            <div class="share-result" id="shareResult" style="display:none">
+              <button class="btn-share" onclick="shareResult()">
+                📤 Share Result
+              </button>
+              <button class="btn-copy" onclick="copyResult()">
+                📋 Copy
               </button>
             </div>
           </div>
 
-          <div class="entries-list-wrap">
-            <div class="entries-list-header">
-              <span id="entryCount">5 entries</span>
-              <button class="link-btn" onclick="removeLastWinner()">Remove last winner</button>
-            </div>
-            <ul class="entries-list" id="entriesList"></ul>
-          </div>
+        </div><!-- /spinner-layout -->
+      </div>
+    </section>
 
-          <div class="theme-picker">
-            <span class="theme-label">Wheel Theme:</span>
-            <div class="theme-swatches">
-              <button class="swatch active" data-theme="vivid" onclick="setTheme('vivid')" title="Vivid"></button>
-              <button class="swatch" data-theme="candy" onclick="setTheme('candy')" title="Candy"></button>
-              <button class="swatch" data-theme="ocean" onclick="setTheme('ocean')" title="Ocean"></button>
-              <button class="swatch" data-theme="sunset" onclick="setTheme('sunset')" title="Sunset"></button>
-              <button class="swatch" data-theme="forest" onclick="setTheme('forest')" title="Forest"></button>
-              <button class="swatch" data-theme="mono" onclick="setTheme('mono')" title="Mono"></button>
-            </div>
-          </div>
-
-          <!-- Options -->
-          <div class="spin-options">
-            <label class="opt-toggle">
-              <input type="checkbox" id="removeWinner" /> Remove winner after spin
-            </label>
-            <label class="opt-toggle">
-              <input type="checkbox" id="confettiOpt" checked /> Confetti on winner
-            </label>
-            <label class="opt-toggle">
-              <input type="checkbox" id="soundOpt" checked /> Sound effects
-            </label>
-          </div>
-        </div>
-
-        <!-- CENTER: Wheel Canvas -->
-        <div class="wheel-center">
-          <div class="wheel-wrapper">
-            <div class="wheel-glow"></div>
-            <canvas id="wheelCanvas" width="480" height="480"></canvas>
-            <div class="wheel-pointer">▼</div>
-            <div class="wheel-center-btn" id="spinCenterBtn" onclick="spinWheel()">
-              <span id="spinBtnText">SPIN</span>
-            </div>
-          </div>
-          <button class="btn-spin" id="spinBtn" onclick="spinWheel()">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M21 12a9 9 0 1 1-9-9" stroke="white" stroke-width="2.5" stroke-linecap="round"/><path d="M21 3v5h-5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            SPIN THE WHEEL
-          </button>
-        </div>
-
-        <!-- RIGHT: Results -->
-        <div class="results-panel">
-          <h3>🏆 Results</h3>
-          <div class="winner-display" id="winnerDisplay">
-            <div class="winner-placeholder">
-              <span class="winner-icon">🎯</span>
-              <p>Spin the wheel to see who wins!</p>
-            </div>
-          </div>
-          <div class="history-wrap">
-            <div class="history-header">
-              <span>Spin History</span>
-              <button class="link-btn" onclick="clearHistory()">Clear</button>
-            </div>
-            <ul class="history-list" id="historyList">
-              <li class="history-empty">No spins yet</li>
-            </ul>
-          </div>
-          <div class="share-result" id="shareResult" style="display:none">
-            <button class="btn-share" onclick="shareResult()">
-              📤 Share Result
-            </button>
-            <button class="btn-copy" onclick="copyResult()">
-              📋 Copy
-            </button>
-          </div>
-        </div>
-
-      </div><!-- /spinner-layout -->
-    </div>
-  </section>
+  </div><!-- /main-content-wrapper -->
 
   <!-- HOW IT WORKS -->
   <section class="how-it-works" id="how">
