@@ -508,7 +508,7 @@ body {
     flex-direction: column;
   }
   .spinner-section {
-    order: -1 !important;
+    order: 1 !important;
   }
   .wheel-types-nav {
     order: 0 !important;
