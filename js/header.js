@@ -5,7 +5,7 @@
     <div class="header-inner">
       <a href="/" class="logo">
   <img src="/logo.png" alt="Names on Wheel Logo" class="logo-image">
-  Wheel Spin Game
+  Spin The Wheel
 </a>
       <nav>
         <ul class="nav-links" id="navLinks">
