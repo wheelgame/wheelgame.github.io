@@ -5,7 +5,7 @@
     <div class="header-inner">
       <a href="/" class="logo">
   <img src="/logo.png" alt="Names on Wheel Logo" class="logo-image">
-  Names on Wheel
+  Wheel Spin Game
 </a>
       <nav>
         <ul class="nav-links" id="navLinks">
@@ -24,7 +24,7 @@
       </nav>
     </div>
     <nav class="mobile-nav" id="mobileNav">
-      <a href="/#home" onclick="closeMobileNav()">🏠 Home</a>
+      <a href="/" onclick="closeMobileNav()">🏠 Home</a>
       <a href="/#spinner" onclick="closeMobileNav()">🎡 Spin Wheel</a>
       <a href="/#wheel-types" onclick="closeMobileNav()">🎨 Wheel Types</a>
       <a href="/#features" onclick="closeMobileNav()">⚡ Features</a>
